@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture, Image } from "@astrojs/image/components";
+---
+
+<Layout>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <div class="h-screen w-full">
+    <div class="swiper mySwiper h-screen">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper z-[-2]">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="/hero1.jpg"
+            alt="hero slide"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/hero2.jpg"
+            alt="hero slide"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="/hero3.jpg"
+            alt="hero slide"
+            class="h-full w-full object-cover grayscale"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="m-auto max-w-[1140px]">
+      <div
+        class="absolute top-[30%] z-[99] flex h-full w-full flex-col px-20 md:top-[40%] md:px-40"
+      >
+        <h1
+          class="text-3xl font-bold leading-8 tracking-tight text-gray-100 md:text-5xl"
+        >
+          Find the best coaches near your with <span
+            class="tracking-tight underline decoration-blue-500 decoration-solid decoration-8"
+            >CoachStar</span
+          >
+        </h1>
+        <p class="py-16 text-xl italic leading-8 tracking-tight text-gray-50">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit..
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  var swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>

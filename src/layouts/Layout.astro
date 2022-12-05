@@ -1,0 +1,29 @@
+---
+import "../assets/base.css";
+import { SITE } from "../config";
+import BaseHead from "../components/BaseHead.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={SITE.title}
+      description={SITE.description}
+      image={SITE.image}
+    />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import Swiper from "swiper";
+      const swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
