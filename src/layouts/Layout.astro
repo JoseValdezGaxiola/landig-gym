@@ -2,6 +2,9 @@
 import "../assets/base.css";
 import { SITE } from "../config";
 import BaseHead from "../components/BaseHead.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Features from "../components/Features.astro";
+import NavBar from "../components/NavBar.astro";
 ---
 
 <!DOCTYPE html>
@@ -14,7 +17,11 @@ import BaseHead from "../components/BaseHead.astro";
     />
   </head>
   <body>
+    <NavBar />
     <slot />
+
+    <Features />
+    <Testimonials />
     <script>
       import Swiper from "swiper";
       const swiper = new Swiper(".mySwiper", {
