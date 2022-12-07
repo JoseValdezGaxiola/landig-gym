@@ -17,27 +17,27 @@ import { Picture, Image } from "@astrojs/image/components";
           <img
             src="/hero1.jpg"
             alt="hero slide"
-            class="h-full w-full object-cover grayscale"
+            class="h-full w-full object-cover brightness-50 grayscale"
           />
         </div>
         <div class="swiper-slide">
           <img
             src="/hero2.jpg"
             alt="hero slide"
-            class="h-full w-full object-cover grayscale"
+            class="h-full w-full object-cover brightness-50 grayscale"
           />
         </div>
         <div class="swiper-slide">
           <img
             src="/hero3.jpg"
             alt="hero slide"
-            class="h-full w-full object-cover grayscale"
+            class="h-full w-full object-cover brightness-50 grayscale"
           />
         </div>
       </div>
     </div>
 
-    <div class="m-auto max-w-[1140px]">
+    <div class="m-auto w-full">
       <div
         class="absolute top-[30%] z-[99] flex h-full w-full flex-col px-20 md:top-[40%] md:px-40"
       >
@@ -63,7 +63,7 @@ import { Picture, Image } from "@astrojs/image/components";
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   });
