@@ -1,6 +1,6 @@
 export const SITE = {
   name: "CoachStar",
-  title: "Jose Valdez Gaxiola",
+  title: "CoachStar",
   description: "Best Solution For Coaches",
   image: "/profile.jpg",
 };
