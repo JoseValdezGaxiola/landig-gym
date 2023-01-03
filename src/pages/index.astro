@@ -6,7 +6,7 @@ import { Picture, Image } from "@astrojs/image/components";
 <Layout>
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
   />
   <div class="h-screen w-full">
     <div class="swiper mySwiper h-screen">
@@ -56,12 +56,16 @@ import { Picture, Image } from "@astrojs/image/components";
     </div>
   </div>
 </Layout>
-<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+></script>
 <script is:inline>
   var swiper = new Swiper(".mySwiper", {
     cssMode: true,
-    loop: true,
     centeredSlides: true,
+
+    loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
