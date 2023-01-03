@@ -9,16 +9,13 @@
       <img src="/logo.png" class="mr-3 h-6 sm:h-9" alt="coachstar Logo" />
     </a>
     <button
-      data-collapse-toggle="navbar-default"
       type="button"
-      class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
-      aria-controls="navbar-default"
-      aria-expanded="false"
+      class="mobile-menu-button ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
     >
-      <span class="sr-only">Open main menu</span>
+     
       <svg
         class="h-6 w-6"
-        aria-hidden="true"
+       
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +25,7 @@
           clip-rule="evenodd"></path>
       </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+    <div class="mobile-menu hidden w-full md:block md:w-auto">
       <ul
         class="mt-4 flex flex-col rounded-lg border p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:text-sm md:font-medium"
       >
@@ -71,3 +68,11 @@
     </div>
   </div>
 </nav>
+<script>
+  const btn = document.querySelector("button.mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
